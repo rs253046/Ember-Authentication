@@ -4,6 +4,7 @@ export default function() {
 
   let pathLists = [
     'employees',
+    'users'
   ];
 
   // rest services for different generators
