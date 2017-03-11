@@ -6,6 +6,12 @@ export default Ember.Controller.extend({
 	actions: {
 		login(user) {
       this.get('session').login(user);
+      var previousTransition = this.get('previousTransition');
+      if (previousTransition) {
+      	this.set('previousTransition', null);
+      	previousTransition.retry();
+      	return
+      }
       this.transitionToRoute('employees');
 		}
 	}

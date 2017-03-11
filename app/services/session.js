@@ -11,7 +11,7 @@ export default Ember.Service.extend({
 
 	logout(user) {
     this.set('currentUser', null);
-    Cookies.set('userId', null);
+    Cookies.remove('userId');
 	},
 
   initializeFromCookie: function(){
