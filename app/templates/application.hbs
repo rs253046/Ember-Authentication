@@ -1,0 +1,10 @@
+<div class="container">
+  <span class="pull-right">
+    {{#if session.currentUser}}
+      <span {{action 'logout'}} style="cursor:pointer;" >Logout - {{session.currentUser.email}}</span> ----- {{#link-to 'employees'}}Employee{{/link-to}}
+    {{else}}
+      {{#link-to 'users'}}Login{{/link-to}}
+    {{/if}}
+  </span>
+  {{outlet}}
+</div>

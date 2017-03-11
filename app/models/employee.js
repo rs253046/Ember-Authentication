@@ -6,5 +6,6 @@ export default DS.Model.extend({
   employeeAddress: DS.attr('string'),
   employeeNumber: DS.attr('number'),
   employeePhoneNumber: DS.attr('number'),
-	toS: Ember.computed.alias('name')
+	toS: Ember.computed.alias('name'),
+	userEmployee: DS.hasMany('user-employee')
 });
