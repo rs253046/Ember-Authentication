@@ -14,7 +14,7 @@ export default function( server ) {
 
   
   pathLists.forEach((item) => {
-   seedDatabase(server, item, 10);
+   // seedDatabase(server, item, 10);
   })
 
   server.createList('user' , 3);

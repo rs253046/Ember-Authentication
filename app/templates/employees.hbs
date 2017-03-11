@@ -5,10 +5,10 @@
         <ul class="nav">
           <li>{{#link-to 'employees.new' tagname="button" }}<i class='glyphicon glyphicon-plus'>
           <strong>New</strong></i>{{/link-to}}</li><hr>
-          {{#each model as |employee|}}
+          {{#each userEmployee as |employee index|}}
 						<li>
-						  {{#link-to 'employees.employee.show' employee tagname="button" }}
-						    {{employee.employee}}
+						  {{#link-to 'employees.employee.show' employee.employee tagname="button" }}
+						    {{employee.employee.employee}}
 						  {{/link-to}}
 						</li>
 					{{/each}}                  
