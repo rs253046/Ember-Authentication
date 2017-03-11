@@ -1,0 +1,11 @@
+<h1>Show Employee</h1>
+ <div class="crud-input">Title: {{model.employee}}</div>
+  <div class="crud-attr">employeeName: {{model.employeeName}}</div>
+  <div class="crud-attr">employeeAddress: {{model.employeeAddress}}</div>
+  <div class="crud-attr">employeeNumber: {{model.employeeNumber}}</div>
+  <div class="crud-attr">employeePhoneNumber: {{model.employeePhoneNumber}}</div>
+<!-- attributes go here -->
+<hr>
+{{#link-to 'employees.employee.edit' model tagname="button" }}Edit{{/link-to}}
+
+<button {{action 'delete'}} class="pull-right btn btn-primary">Delete</button>

@@ -1,0 +1,22 @@
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-2 v-divider">
+      <nav class="nav-sidebar">
+        <ul class="nav">
+          <li>{{#link-to 'employees.new' tagname="button" }}<i class='glyphicon glyphicon-plus'>
+          <strong>New</strong></i>{{/link-to}}</li><hr>
+          {{#each model as |employee|}}
+						<li>
+						  {{#link-to 'employees.employee.show' employee tagname="button" }}
+						    {{employee.employee}}
+						  {{/link-to}}
+						</li>
+					{{/each}}                  
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-9">
+			{{outlet}}
+		</div>
+  </div>
+</div>
