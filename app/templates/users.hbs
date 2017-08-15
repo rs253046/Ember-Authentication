@@ -1,0 +1,8 @@
+Users <br>
+
+{{#each model as |user|}}
+  User Name -- {{user.name}} <br>
+  Email -- {{user.email}} <br>
+  <button {{action 'login' user}}>Login</button> 
+  <hr>
+{{/each}}
